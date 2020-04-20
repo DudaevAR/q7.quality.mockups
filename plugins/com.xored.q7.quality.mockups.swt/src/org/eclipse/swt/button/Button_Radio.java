@@ -59,8 +59,7 @@ public class Button_Radio extends BaseMockupPart {
 
 	private void selectionChange() {
         boolean buttonSelected = radioButtons[5].getSelection();
-        radioButtons[1].setEnabled(!buttonSelected);
-        text.setText(buttonSelected ? "" : "selected");
+        text.setText(buttonSelected ? "selected" : "");
     }
 
 }
