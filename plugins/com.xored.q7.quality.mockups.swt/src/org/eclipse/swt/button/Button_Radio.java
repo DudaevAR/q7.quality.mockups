@@ -50,9 +50,9 @@ public class Button_Radio extends BaseMockupPart {
 		radioButtons[5].addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-                selectionChange();
-            }
-        });
+                		selectionChange();
+            		}
+        	});
 		
 		return null;
 	}
