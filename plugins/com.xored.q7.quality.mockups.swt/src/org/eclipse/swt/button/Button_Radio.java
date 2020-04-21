@@ -26,7 +26,7 @@ public class Button_Radio extends BaseMockupPart {
 				.grab(true, true).applyTo(composite);
 		GridLayoutFactory.swtDefaults().numColumns(1).applyTo(composite);
 		text = new Text(parent, SWT.NONE);
-		text.setText("");
+		text.setText("unselected");
 		radioButtons[0] = new Button(composite, SWT.RADIO);
 		radioButtons[0].setSelection(true);
 		radioButtons[0].setText("Choice 1");
@@ -59,7 +59,7 @@ public class Button_Radio extends BaseMockupPart {
 
 	private void selectionChange() {
         boolean buttonSelected = radioButtons[5].getSelection();
-        text.setText(buttonSelected ? "selected" : "");
+        text.setText(buttonSelected ? "selected" : "unselected");
     }
 
 }

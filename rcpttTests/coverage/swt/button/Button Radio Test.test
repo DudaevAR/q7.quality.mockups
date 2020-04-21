@@ -6,8 +6,8 @@ Element-Type: testcase
 Element-Version: 3.0
 External-Reference: 
 Id: _UPfZgJa6EeK184kZHmPTQQ
-Runtime-Version: 2.5.1.202004201035
-Save-Time: 4/20/20 6:54 PM
+Runtime-Version: 2.5.1.202004210855
+Save-Time: 4/21/20 4:53 PM
 Tags: swt
 Testcase-Type: ecl
 
@@ -74,4 +74,13 @@ with [get-view "Q7 Quality Mockups" | get-group "ButonRadio Test"] {
     }
 }
 
+with [get-view "Q7 Quality Mockups"] {
+    get-group "ButonRadio Test" | get-button "Choice 5" | click
+    get-tree | select "swt/toolbar"
+}
+get-view "Q7 Quality Mockups" | get-group "ButonRadio Test" | get-editbox | get-property text | equals selected 
+    | verify-true
+get-view "Q7 Quality Mockups" | get-group "ButonRadio Test" | get-button "Choice 3" -index 1 | click
+get-view "Q7 Quality Mockups" | get-group "ButonRadio Test" | get-editbox | get-property text | equals unselected 
+    | verify-true
 ------=_.content-0a7243a0-75d3-3d5f-9791-539de0e5b7ac--
